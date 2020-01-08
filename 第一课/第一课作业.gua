@@ -285,12 +285,14 @@ const square = function(x, y,length,space,n,m){
         forward(length + space)
         j = j + 1
         }
-    right(270)
-    forward(space)
+        right(-90)
+        forward(space)
     t = t + 1
+    }
 }
 
-square(0, 0,6,2,1,1)
+square(0, 0,20,10,2,2)
+
 
 // 7
 // ===
