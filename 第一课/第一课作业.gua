@@ -98,7 +98,19 @@ const square = function(x, y, length) {
 
 }
 
+答：
+const square = function(x, y,length){
+    jump(x, y,length)
+    setHeading(0)
+    var i = 0
+    while (i < 4){
+        forward(length)
+        right(90)
+        i = i + 1
+    }
+}
 
+square(0, 0,50)
 
 // 2
 // ===
@@ -115,7 +127,21 @@ const rect = function(x, y, w, h) {
 
 }
 
+答：
+const retangle = function(x, y,w,h){
+    jump(x, y,w,h)
+    setHeading(0)
+    var i = 0
+    while (i < 2){
+        forward(w)
+        right(90)
+        forward(h)
+        right(90)
+        i = i + 1
+    }
+}
 
+retangle(0, 0,50,60)
 
 // 3
 // ===
@@ -132,8 +158,24 @@ const rect = function(x, y, w, h) {
 const square5 = function() {
 
 }
+答：
+const square = function(x, y,length){
+    jump(x, y,length)
+    setHeading(0)
+    var j = 0
+    while (j < 5){
+    var i = 0
+    while (i < 4){
+        forward(length)
+        right(90)
+        i = i + 1
+    }
+        forward(length)
+        j = j + 1
+    }
+}
 
-
+square(0, 0,50)
 
 // 4
 // ===
@@ -150,6 +192,24 @@ const square5_10 = function() {
 
 }
 
+
+const square = function(x, y,length){
+    jump(x, y,length)
+    setHeading(0)
+    var j = 0
+    while (j < 5){
+    var i = 0
+    while (i < 4){
+        forward(length)
+        right(90)
+        i = i + 1
+    }
+        forward(length + 30)
+        j = j + 1
+    }
+}
+
+square(0, 0,50)
 
 
 // 5
@@ -170,7 +230,24 @@ const square_line = function(x, y, n, space, len) {
 
 }
 
+答：
+const square = function(x, y,n,length,space){
+    jump(x, y,n,length,space)
+    setHeading(0)
+    var j = 0
+    while (j < n){
+    var i = 0
+    while (i < 4){
+        forward(length)
+        right(90)
+        i = i + 1
+    }
+        forward(length + space)
+        j = j + 1
+    }
+}
 
+square(0, 0,3,50,5)
 
 // 6
 // ===
@@ -191,8 +268,29 @@ const square_line = function(x, y, n, space, len) {
 const square_square = function(x, y, space, len, n, m) {
 
 }
+答：
+const square = function(x, y,length,space,n,m){
+    jump(x, y,length,space,n,m)
+    setHeading(0)
+    var t = 0
+    while (t < m){
+        var j = 0
+        while (j < n){
+            var i = 0
+            while (i < 4){
+            forward(length)
+            right(90)
+            i = i + 1
+            }
+        forward(length + space)
+        j = j + 1
+        }
+    right(270)
+    forward(space)
+    t = t + 1
+}
 
-
+square(0, 0,6,2,1,1)
 
 // 7
 // ===
@@ -212,7 +310,26 @@ const rect_line = function(x, y, w, h, n, space) {
 
 }
 
+答：
+const square = function(x, y,n,w,h,space){
+    jump(x, y,n,w,h,space)
+    setHeading(0)
+    var j = 0
+    while (j < n){
+    var i = 0
+    while (i < 2){
+        forward(w)
+        right(90)
+        forward(h)
+        right(90)
+        i = i + 1
+    }
+        forward(w + space)
+        j = j + 1
+    }
+}
 
+square(0,0,3,5,10,10)
 
 // 8
 // ===
@@ -250,3 +367,23 @@ const rect_square = function(x, y, space, w, h, n, m) {
 const polygon = function(x, y, n, length) {
 
 }
+  
+const square = function(x, y, n, m, length,space){
+    jump(x, y, n, m, length,space)
+    setHeading(0)
+    var a = (n - 2) * 180 / n
+    var degree = 180 - a
+    var j = 0
+    while (j < m){
+    var i = 0
+    while (i < n){
+        forward(length)
+        right(degree)
+        i = i + 1
+    }
+        forward(length + space)
+        j = j + 1
+    }
+}
+
+square(0,0,3,30,5,10)
